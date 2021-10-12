@@ -10,17 +10,17 @@ function isManager(id) {
     return data.employees.some((obj) => obj.id === id);
   }
   return false;
-};
+}
 
 function getRelatedEmployees(managerId) {
   const result = isManager(managerId);
   if (result !== true) {
     throw new Error('O id inserido não é de uma pessoa colaboradora gerente!');
   }
-    return data.employees.filter((employee) => employee.managers
+  return data.employees.filter((employee) => employee.managers
     .some((value) => value === managerId))
     .map((name) => `${name.firstName} ${name.lastName}`);
-};
+}
 
 console.log(getRelatedEmployees('9e7d4524-363c-416a-8759-8aa7e50c0992'));
 
