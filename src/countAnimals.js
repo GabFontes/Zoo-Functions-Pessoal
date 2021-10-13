@@ -16,13 +16,13 @@ function countAnimals(animal) {
   if (Object.values(animal).length === 1) {
     return data.species.find((specie) => specie.name === animal.specie).residents.length;
   }
-    return data.species.find((specie) => specie.name === animal.specie).residents
+  return data.species.find((specie) => specie.name === animal.specie).residents
     .filter((key) => key.sex === animal.sex).length;
 }
 console.log(countAnimals());
 
 module.exports = countAnimals;
 
-//return data.species.find((specie) => specie.name === animal.specie).residents.length;
+// return data.species.find((specie) => specie.name === animal.specie).residents.length;
 
-//return data.species.filter((specie) => specie.residents.sex === animal.sex)
+// return data.species.filter((specie) => specie.residents.sex === animal.sex)
