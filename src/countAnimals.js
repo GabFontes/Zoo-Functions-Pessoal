@@ -19,10 +19,6 @@ function countAnimals(animal) {
   return data.species.find((specie) => specie.name === animal.specie).residents
     .filter((key) => key.sex === animal.sex).length;
 }
-console.log(countAnimals());
+console.log(countAnimals({ specie: 'penguins' }));
 
 module.exports = countAnimals;
-
-// return data.species.find((specie) => specie.name === animal.specie).residents.length;
-
-// return data.species.filter((specie) => specie.residents.sex === animal.sex)
